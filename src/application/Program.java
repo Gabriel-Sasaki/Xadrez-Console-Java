@@ -36,12 +36,7 @@ public class Program {
                     captured.add(capturedPiece);
                 }
             }
-            catch(ChessException e) {
-                System.out.println("\n" + e.getMessage());
-                System.out.print("Click [ENTER] to try again");
-                sc.nextLine();
-            }
-            catch(InputMismatchException e) {
+            catch(ChessException | InputMismatchException e) {
                 System.out.println("\n" + e.getMessage());
                 System.out.print("Click [ENTER] to try again");
                 sc.nextLine();
